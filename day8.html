@@ -1,6 +1,6 @@
 <html>
   <head>
-    <script>
+    <script lang = text/javascript>
       /* EXERCISE 1
       Write a function for changing the title of the document in something else.
       */
@@ -127,15 +127,14 @@
       */
 
       const inputField = document.getElementById("input-field");
-      // ...
 
       /* EXERCISE 12
       Create a new welcome alert message when the page successfully loads.
       */
-
-      window.onload = function () {
-        //
-      };
+      const giveAlert = () => {
+        alert("Ding! your page is cooked")
+      }
+      window.onload = giveAlert(event)
 
       /* EXERCISE 13
       Use HTML5 tags to divide the content of the page in a more semantic way.
@@ -202,4 +201,7 @@
       <p>And this text is just for the exercise too!</p>
     </footer>
   </body>
+  <script lang = text/javascript>
+  window.onload = giveAlert(event)
+  </script>
 </html>
