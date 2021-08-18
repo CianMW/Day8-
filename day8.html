@@ -24,7 +24,8 @@
       */
 
       const changePcontent = function () {
-        //
+        let pChildOfDiv = document.querySelector("div").querySelectorAll("p")[0]
+            pChildOfDiv.textContent = "I bet you didn't even see me change!"
       };
 
       /* EXERCISE 4
@@ -122,6 +123,7 @@
         <input type="button" value="click me to change the title" onclick="changeTitle(event)"/>
         
         <input type="button" value="click me to add class to the title" onclick="addClassToTitle(event)"/>
+        <input type="button" value="change the p content in the div" onclick="changePcontent(event)"/>
 
       <ul id="firstList">
         <li>1st</li>
