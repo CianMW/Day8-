@@ -14,9 +14,9 @@
       Write a function for changing the class of the title of the page in "myHeading".
       */
 
-      const addClassToTitle = function () {
-        let titleLocation = document.getElementsByTagName('h1')
-        title.classList.add("size")
+      const addClassToTitle = function (eventData) {
+        let titleLocation = document.getElementsByTagName('h1')[0]
+        titleLocation.classList.add("size")
       };
 
       /* EXERCISE 3
@@ -117,7 +117,12 @@
 
     <main>
       <hr />
-        <input type="button" value="click me to change the title" onclick="changeTitle(event)"
+
+
+        <input type="button" value="click me to change the title" onclick="changeTitle(event)"/>
+        
+        <input type="button" value="click me to add class to the title" onclick="addClassToTitle(event)"/>
+
       <ul id="firstList">
         <li>1st</li>
         <li>2nd</li>
