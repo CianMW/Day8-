@@ -58,19 +58,13 @@
       */
 
       const addParagraph = function (content) {
-        let allDivs = document.getElementsByTagName('div')
+        let allDivs = document.getElementsByTagName('div')[0]
         let newElementP = document.createElement("P"); 
         let text = document.createTextNode("This is another paragraph")
             newElementP.appendChild(text)
-        for (let i = 0; i < allDivs.length; i++) {
-            const specificDiv = allDivs[i];
-            if (specificDiv.contains(p)) {
-                specificDiv.appendChild(newElementP)
+            allDivs.appendChild(newElementP)
             }
             
-        }
- 
-    };
 
       /* EXERCISE 7
       Write a function for making the first UL disappear.
@@ -122,7 +116,7 @@
             pageFooter.textContent = "phew I really need a coffee now"
       };
 
-      /* EXERCISE 11
+      /* EXERCISE 11 !!NOT FINISHED
       Attach an event listener to the input field in the page for console logging its value just after any keystroke.
       */
 
@@ -134,9 +128,8 @@
       const giveAlert = () => {
         alert("Ding! your page is cooked")
       }
-      window.onload = giveAlert(event)
 
-      /* EXERCISE 13
+      /* EXERCISE 13  !!NOT FINISHED
       Use HTML5 tags to divide the content of the page in a more semantic way.
       */
     </script>
