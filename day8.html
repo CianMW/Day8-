@@ -107,8 +107,6 @@
 
       const makeItClickable = function () {
 
-
-
             let pageHeading = document.querySelector("header")
             let color =  generateRandomColor()
             pageHeading.style.backgroundColor =  color
@@ -120,7 +118,8 @@
       */
 
       const changeFooterText = function () {
-        //
+        let pageFooter = document.querySelector("footer").getElementsByTagName("p")[0]
+            pageFooter.textContent = "phew I really need a coffee now"
       };
 
       /* EXERCISE 11
@@ -199,7 +198,7 @@
       </div>
     </main>
 
-    <footer>
+    <footer onclick="changeFooterText(event)">
       <p>And this text is just for the exercise too!</p>
     </footer>
   </body>
