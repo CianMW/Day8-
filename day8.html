@@ -88,7 +88,12 @@
       */
 
       const paintItGreen = function () {
-        //
+        let UnorderedLists = document.getElementsByTagName("ul")
+        for (let i = 0; i < UnorderedLists.length; i++) {
+            const element = UnorderedLists[i];
+            element.style.backgroundColor="green"
+        }
+        
       };
 
       /* EXERCISE 9
@@ -153,6 +158,7 @@
         <input type="button" value="watch the paragraphs multiply" onclick="addParagraph(event)"/>
         
         <input type="button" value="destroy the first list" onclick="firstUlDisappear(event)"/>
+        <input type="button" value="Green is the best!" onclick="paintItGreen(event)"/>
 
 
       <ul id="firstList">
