@@ -99,8 +99,19 @@
       /* EXERCISE 9
       Make the heading of the page change color every time the user clicks on it.
       */
+      const generateRandomColor = () => {
+      let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16)
+      return randomColor
+    }
+    
 
       const makeItClickable = function () {
+
+
+
+            let pageHeading = document.querySelector("header")
+            let color =  generateRandomColor()
+            pageHeading.style.backgroundColor =  color
         //
       };
 
@@ -139,7 +150,7 @@
     </style>
   </head>
   <body>
-    <header>
+    <header onclick="makeItClickable(event)">
       <h1>This is the title of the page</h1>
       <h2>This is the subtitle of the page</h2>
     </header>
