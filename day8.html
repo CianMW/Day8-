@@ -23,7 +23,7 @@
       Write a function for changing the text of only the p which are children of a div.
       */
 
-      const changePcontent = function () {
+      const changePcontent = function (eventData) {
         let pChildOfDiv = document.querySelector("div").querySelectorAll("p")[0]
             pChildOfDiv.textContent = "I bet you didn't even see me change!"
       };
@@ -32,8 +32,14 @@
       Write a function for changing the destination of every link to https://www.google.com
       */
 
-      const changeUrls = function () {
-        //
+      const changeUrls = function (eventData) {
+        let aElements = document.getElementsByTagName("a")
+
+        for (let i = 0; i < aElements.length; i++) {
+            const element = aElements[i];
+            element.href = "https://www.google.com"
+        }
+           // aElements.href = "https://www.google.com"
       };
 
       /* EXERCISE 5
@@ -124,6 +130,8 @@
         
         <input type="button" value="click me to add class to the title" onclick="addClassToTitle(event)"/>
         <input type="button" value="change the p content in the div" onclick="changePcontent(event)"/>
+        <input type="button" value="change the strive link" onclick="changeUrls(event)"/>
+
 
       <ul id="firstList">
         <li>1st</li>
