@@ -39,7 +39,6 @@
             const element = aElements[i];
             element.href = "https://www.google.com"
         }
-           // aElements.href = "https://www.google.com"
       };
 
       /* EXERCISE 5
@@ -47,6 +46,10 @@
        */
 
       const addToTheSecond = function (content) {
+        let newListItem = document.createElement("LI");                
+        let text = document.createTextNode("HEY! I'm a new list item!");       
+        newListItem.appendChild(text);                             
+        document.getElementById("secondList").appendChild(newListItem)
         //
       };
 
@@ -55,15 +58,29 @@
       */
 
       const addParagraph = function (content) {
-        //
-      };
+        let allDivs = document.getElementsByTagName('div')
+        let newElementP = document.createElement("P"); 
+        let text = document.createTextNode("This is another paragraph")
+            newElementP.appendChild(text)
+        for (let i = 0; i < allDivs.length; i++) {
+            const specificDiv = allDivs[i];
+            if (specificDiv.contains(p)) {
+                specificDiv.appendChild(newElementP)
+            }
+            
+        }
+ 
+    };
 
       /* EXERCISE 7
       Write a function for making the first UL disappear.
       */
 
       const firstUlDisappear = function () {
-        //
+        //let UnorderedList1 = document.getElementsByTagName("ul")[0]
+         //   .remove(UnorderedList1)
+         let elem = document.querySelector('ul#firstList');
+            elem.style.display = 'none';
       };
 
       /* EXERCISE 8
@@ -131,6 +148,11 @@
         <input type="button" value="click me to add class to the title" onclick="addClassToTitle(event)"/>
         <input type="button" value="change the p content in the div" onclick="changePcontent(event)"/>
         <input type="button" value="change the strive link" onclick="changeUrls(event)"/>
+        <input type="button" value="Add another list item!" onclick="addToTheSecond(event)"/>
+        <br>
+        <input type="button" value="watch the paragraphs multiply" onclick="addParagraph(event)"/>
+        
+        <input type="button" value="destroy the first list" onclick="firstUlDisappear(event)"/>
 
 
       <ul id="firstList">
